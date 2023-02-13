@@ -6,6 +6,7 @@ import AddReview from "./components/AddReview";
 import Restaurant from "./components/Restaurant";
 import Login from "./components/Login";
 import DefaultPage from "./components/DefaultPage";
+import "./App.css";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -24,7 +25,7 @@ function App() {
           <Route index element={<RestaurantsList />} />
           <Route path="restaurants" element={<RestaurantsList />} />
           <Route path="restaurants/:id/review" element={<AddReview />} />
-          <Route path="restaurants/:id" element={<Restaurant />} />
+          <Route path="restaurants/:id" element={<Restaurant user={user}/>} />
           <Route path="login" element={<Login />} />
         </Route>
       </Routes>
