@@ -9,7 +9,7 @@ function Header({ user, login, logout }) {
             <div className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link to={"/restaurants"} className="nav-link">
-                        Restaurant Reviews
+                        Restaurants
                     </Link>
                 </li>
                 <li className="nav-item">

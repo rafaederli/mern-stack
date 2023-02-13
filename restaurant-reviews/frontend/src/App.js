@@ -24,9 +24,9 @@ function App() {
         <Route path="/" element={<DefaultPage user={user} login={login} logout={logout} />}>
           <Route index element={<RestaurantsList />} />
           <Route path="restaurants" element={<RestaurantsList />} />
-          <Route path="restaurants/:id/review" element={<AddReview />} />
+          <Route path="restaurants/:id/review" element={<AddReview user={user} />} />
           <Route path="restaurants/:id" element={<Restaurant user={user}/>} />
-          <Route path="login" element={<Login />} />
+          <Route path="login" element={<Login login={login} />} />
         </Route>
       </Routes>
     </BrowserRouter>
